@@ -2,9 +2,6 @@
 
 require_relative '../config/environment'
 
-puts "Welcome to Tic Tac Toe"
-puts "Enter 0, 1, or 2 for number of Players"
-user_input = gets.strip
 computer_x = Players::Computer.new('X')
 computer_o = Players::Computer.new('O')
 player_x = Players::Human.new('X')
