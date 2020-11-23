@@ -19,11 +19,11 @@ when '1'
   until token == 'X' || token == 'O' do
     token = gets.strip
   end
-  token == 'X' ? Game.new(player_x).play : Game.new(player_o)
+  token == 'X' ? Game.new(player_x, computer_o).play : Game.new(player_o, computer_x).play
     
 when '2'
   puts "Player 1, would you like to be X or O"
   until token == 'X' || token == 'O' do
     token = gets.strip
   end
-  token == 'X' ? Game.new(player_x, player_o).play : Game.new(player_o, 
+  token == 'X' ? Game.new(player_x, player_o).play : Game.new(player_o, player_x).play
