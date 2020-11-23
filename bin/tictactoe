@@ -12,6 +12,10 @@ player_o = Players::Human.new('O')
 
 case user_input
 when '0'
-  game = Game.new
-
-game.play
+  Game.new(computer_x, computer_o).play
+  
+when '1'
+  puts "Would you like to be X or O"
+  until token == 'X' || token == 'O'
+    token = gets.strip
+    token == 'X' ? 
