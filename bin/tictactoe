@@ -22,7 +22,7 @@ def start_game
   when '1'
     puts "Would you like to be X or O"
     until token == 'X' || token == 'O' do
-      token = gets.strip
+      token = gets.strip.upcase
     end
     token == 'X' ? Game.new(player_x, computer_o).play : Game.new(player_o, computer_x).play
       
