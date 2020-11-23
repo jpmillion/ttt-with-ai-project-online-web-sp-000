@@ -11,7 +11,9 @@ module Players
     def move(board)
       '5' if board.cells[4] == nil
       
-      (rand 1,
+      i = 1 
+      while i < 10 do
+        
           
       (rand 1..9).to_s
     end
