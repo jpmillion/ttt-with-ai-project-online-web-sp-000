@@ -37,6 +37,9 @@ def start_game
     start_game
     
   end
+  
 end
 
 start_game
+
+another_game = puts "Would you like to play another game y/n?"
