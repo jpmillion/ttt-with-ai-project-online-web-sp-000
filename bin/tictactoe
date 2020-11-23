@@ -26,3 +26,4 @@ when '2'
   until token == 'X' || token == 'O' do
     token = gets.strip
   end
+  token == 'X' ? Game.new(player_x, player_o).play
