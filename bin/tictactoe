@@ -18,4 +18,4 @@ when '1'
   puts "Would you like to be X or O"
   until token == 'X' || token == 'O'
     token = gets.strip
-    token == 'X' ? 
+    token == 'X' ? Game.new(player_x).play : Game.new(player_o)
