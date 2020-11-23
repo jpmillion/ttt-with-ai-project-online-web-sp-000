@@ -27,3 +27,9 @@ when '2'
     token = gets.strip
   end
   token == 'X' ? Game.new(player_x, player_o).play : Game.new(player_o, player_x).play
+  
+else
+  start_game
+  
+end
+  
