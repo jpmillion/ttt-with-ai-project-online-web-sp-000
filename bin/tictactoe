@@ -10,26 +10,26 @@ computer_o = Players::Computer.new('O')
 player_x = Players::Human.new('X')
 player_o = Players::Human.new('O')
 
-case user_input
-when '0'
-  Game.new(computer_x, computer_o).play
-  
-when '1'
-  puts "Would you like to be X or O"
-  until token == 'X' || token == 'O' do
-    token = gets.strip
-  end
-  token == 'X' ? Game.new(player_x, computer_o).play : Game.new(player_o, computer_x).play
+  case user_input
+  when '0'
+    Game.new(computer_x, computer_o).play
     
-when '2'
-  puts "Player 1, would you like to be X or O"
-  until token == 'X' || token == 'O' do
-    token = gets.strip
+  when '1'
+    puts "Would you like to be X or O"
+    until token == 'X' || token == 'O' do
+      token = gets.strip
+    end
+    token == 'X' ? Game.new(player_x, computer_o).play : Game.new(player_o, computer_x).play
+      
+  when '2'
+    puts "Player 1, would you like to be X or O"
+    until token == 'X' || token == 'O' do
+      token = gets.strip
+    end
+    token == 'X' ? Game.new(player_x, player_o).play : Game.new(player_o, player_x).play
+    
+  else
+    start_game
+    
   end
-  token == 'X' ? Game.new(player_x, player_o).play : Game.new(player_o, player_x).play
-  
-else
-  start_game
-  
-end
   
