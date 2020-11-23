@@ -38,13 +38,15 @@ def start_game
     
   end
   
+  puts "Would you like to play another game y/n?"
+  user_input = gets.strip.upcase
+  if user_input == 'Y'
+    start_game
+  end
+  
 end
 
 start_game
 
-puts "Would you like to play another game y/n?"
-user_input = gets.strip.upcase
-if user_input == 'Y'
-  start_game
-end
+
 
